@@ -3,3 +3,9 @@
 Удалите второй элемент. Добавьте в конец ключ «new_key» со значением «new_value».
 Выведите на печать итоговый словарь. Важно, чтобы словарь остался тем же (имел тот же адрес в памяти).
 """
+first = {"chto": 1, "eto": 2, "za": 3, "schtuka": 4, "zdesya": 5, "???": 6}
+b = list(first.keys())
+first[b[0]], first[b[-1]] = first[b[-1]], first[b[0]]
+del b[1]
+first["new_key"] = "new_value"
+print(first)

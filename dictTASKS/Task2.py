@@ -3,3 +3,9 @@
 а в качестве значения количество этих цифр в строке
 """
 numbers = "0139412831055230677798"
+dic = dict()
+
+for i in numbers:
+    if i not in dic.keys():
+        dic[i] = numbers.count(i)
+print(dic)

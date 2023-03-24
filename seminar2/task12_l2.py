@@ -1,0 +1,5 @@
+a = input()
+a.replace("<span>", "")
+a.replace("</span>", "")
+a.replace("&nbsp;", "")
+print(int(a) + 1)

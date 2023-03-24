@@ -1,0 +1,6 @@
+a = input()
+a.replace(" ", "")
+a.replace("(", "")
+a.replace(")", "")
+a.replace("-", "")
+print(a)

@@ -5,5 +5,12 @@
 Подсказка: чтобы узнать тип элемента можно использовать функцию type()
 """
 testList = [1,2,2,[3,4],(1,2,3),"1",{1,2,3}]
-printSet = set()
+types_change = (list, set, dict)
+res = True
 
+for i in testList:
+    if type(i) in types_change:
+        res = False
+        print(i, end=" ")
+print(res)
+        

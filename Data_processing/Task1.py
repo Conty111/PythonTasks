@@ -93,3 +93,5 @@ characters = {
         }
     }
 }
+print("Hi! I'm", list(characters["16"].items())[0][0] + ". Here's my link:", 
+      list(list(characters["16"].items())[0][1].keys())[0])

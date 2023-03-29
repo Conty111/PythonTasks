@@ -5,6 +5,7 @@
 Сначала запрашивается количество учеников(например 6).
 Дальше запрашивается количество учеников знающих определенный набор языков и языки которые они знают
 Например:
+6
 3
 Russian
 English
@@ -15,6 +16,28 @@ English
 1
 English
 Вывод должен быть:
-3 - [Russian, English,Japenese]
+3 - [Russian, English, Japenese]
 1 - [English]
 """
+languages = set()
+count_input = 0
+count = int(input())
+count_lang = int(input())
+
+while count - count_input > count_lang:
+    lang = set()
+    for i in range(count_lang):
+        lang.add(input())
+    res = languages & lang
+    languages = languages | lang
+    count_input += count_lang
+    count_lang = int(input())
+else:
+    lang = set()
+    for i in range(count_lang):
+        lang.add(input())    
+    res = languages & lang
+    languages = languages | lang
+
+print(f"All know - {list(languages)}")
+print(f"{count_lang} - {list(lang)}")

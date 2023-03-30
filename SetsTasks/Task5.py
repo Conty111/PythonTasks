@@ -39,5 +39,5 @@ else:
     res = languages & lang
     languages = languages | lang
 
-print(f"All know - {list(languages)}")
-print(f"{count_lang} - {list(lang)}")
+print(f"All languages - {list(languages)}")
+print(f"All know this language - {list(lang)}")

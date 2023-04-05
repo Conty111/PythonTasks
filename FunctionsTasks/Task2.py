@@ -7,3 +7,21 @@
 
 Примечание. Наличие функции является обязательным. Функция должна принимать количество набранных баллов.
 """
+SALE_PROCENT: tuple = (10, 15, 20)
+
+
+def sale(scores: int) -> int:
+    global SALE_PROCENT
+    assert scores >= 0, "Введите натуральное значение."
+    if scores >= 100:
+        return SALE_PROCENT[-1]
+    elif scores < 50:
+        return SALE_PROCENT[0]
+    return SALE_PROCENT[1]
+
+
+if __name__ == "__main__":
+    score = int(input('Введите количество баллов: '))
+    while score != "off":
+        print(f'Ваша скидка: {sale(score)}%')
+        score = int(input('Введите количество баллов: '))

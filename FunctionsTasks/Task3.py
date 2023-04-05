@@ -7,3 +7,16 @@
 
 Выдачу допуска реализуй как функцию.
 """
+def check_student(score: int) -> bool:
+    assert score >= 0, "Отрицательное количество баллов не может быть."
+    return score > 50
+
+
+if __name__ == "__main__":
+    count_students = int(input('Количество учеников для проверки: '))
+    for _ in range(count_students):
+        score_student = int(input('Баллы за последний тест: '))
+        if check_student(score_student):
+            print("Вы допущены")
+        else:
+            print("ВЫ ОТЧИСЛЕНЫ!!!")

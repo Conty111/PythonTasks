@@ -5,7 +5,7 @@
 Формула определения ИМТ: index = weight / (height * height)
 """
 def get_IMT(weight: float, height: float) -> float:
-    index = weight / (height ** 2)
+    index = weight / ((height / 100) ** 2)
     assert index > 0, "Incorrect values"
     if index < 18.5:
         return f"Недостаточный вес (ИМТ - {index})"
@@ -15,6 +15,6 @@ def get_IMT(weight: float, height: float) -> float:
 
 
 if __name__ == "__main__":
-    height: float = float(input('Введите рост: '))
+    height: float = float(input('Введите рост (в см): '))
     weight: float = float(input('Введите вес: '))
     print(get_IMT(weight=weight, height=height))

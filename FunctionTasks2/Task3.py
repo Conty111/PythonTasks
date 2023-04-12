@@ -9,17 +9,32 @@
 дить ли еще один рекурсивный вызов. Ваша функция не должна принимать аргумен-
 тов, а возвращать будет числовое значе
 """
+
+
 def calc(example: str) -> float:
     return sum(map(float, example.split()))
 
 
+def calc2(count=0):
+    string = input("Введите число:")
+    if string:
+        print(f"Сумма: {int(string) + count}")
+        return calc2(count=int(string) + count)
+    print("Пока")
+
+
 def main():
-    res = input('Введите числа через пробел: ')
+    res = input("Введите числа через пробел: ")
     while res:
         print("Сумма:", calc(res))
-        res = input('Введите числа через пробел: ')
-    print('пока')
+        res = input("Введите числа через пробел: ")
+    print("пока")
+
+
+def main2():
+    calc2()
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    main2()

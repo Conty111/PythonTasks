@@ -2,6 +2,8 @@
 Создайте функцию которая принимает на вход 3 именованных параметра, выведите на печать значения этих параметров,
 но только в том случае если они не равны None.
 """
+
+
 def check(name: str = None, surname: str = None, age: int = None) -> str:
     if name and surname and age:
         return f"{name} {surname}, {age} лет"

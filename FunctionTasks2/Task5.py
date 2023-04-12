@@ -12,7 +12,7 @@ def get_data(colors, count_colors, **kwargs):
 
 
 def main():
-    get_data(colors="Цвета", count_colors="5", red="111", blue="255")
+    get_data("Цвета", "5", red="111", blue="255")
 
 
 if __name__ == "__main__":

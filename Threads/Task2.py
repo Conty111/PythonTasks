@@ -4,3 +4,19 @@
 В основной части программы запустите поток с функцией и выполните задержку в 10 секунд.
 После выполнения программа должна написать "программа завершается"
 """
+import time
+from threading import Thread
+
+
+def remember():
+    text = input('О чем напомнить? ')
+    sec = int(input('Через сколько секунд? '))
+    time.sleep(sec)
+    print(text)
+
+
+if __name__ == "__main__":
+    th = Thread(target=remember)
+    th.start()
+    time.sleep(10)
+    print('Пока')

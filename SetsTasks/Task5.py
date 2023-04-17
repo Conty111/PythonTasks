@@ -35,7 +35,7 @@ while count - count_input > count_lang:
 else:
     lang = set()
     for i in range(count_lang):
-        lang.add(input())    
+        lang.add(input())
     res = languages & lang
     languages = languages | lang
 

@@ -9,8 +9,8 @@ from threading import Thread
 
 
 def remember():
-    text = input('О чем напомнить? ')
-    sec = int(input('Через сколько секунд? '))
+    text = input("О чем напомнить? ")
+    sec = int(input("Через сколько секунд? "))
     time.sleep(sec)
     print(text)
 
@@ -19,4 +19,4 @@ if __name__ == "__main__":
     th = Thread(target=remember)
     th.start()
     time.sleep(10)
-    print('Пока')
+    print("Пока")

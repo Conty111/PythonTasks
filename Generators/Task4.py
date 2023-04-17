@@ -9,4 +9,3 @@ s = {}
 for i in range(10):
     s[i] = hex(i)
 print(s)
-

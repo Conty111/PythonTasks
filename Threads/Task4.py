@@ -7,6 +7,7 @@ from threading import Thread
 import random
 import os
 
+
 def get_text(path: str) -> str:
     with open(path, "r+") as file:
         return file.readline()
@@ -18,14 +19,16 @@ def write_text(path: str, value: str):
 
 
 def redact_files(path: str):
-    print('Function started')
+    print("Function started")
     # with open(path, "wt+") as file:
     #     file.write(f'ids:{random.randint(10000, 99999)}\n')
-    write_text(path, get_text(path).replace('ids', 'id'))
+    write_text(path, get_text(path).replace("ids", "id"))
 
 
 if __name__ == "__main__":
     dir_path = os.getcwd()
     for i in range(10):
-        th = Thread(target=redact_files, args=(f"{dir_path}/Threads/Files/file{i}.txt", ))
+        th = Thread(
+            target=redact_files, args=(f"{dir_path}/Threads/Files/file{i}.txt",)
+        )
         th.start()

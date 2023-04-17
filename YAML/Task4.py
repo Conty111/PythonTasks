@@ -3,12 +3,13 @@
 """
 
 task = {
-    "kluch1":[
+    "kluch1": [
         {"info1": "not name"},
         {
-            "info2":{"still not name": "not name",
-                     ("not name","oleg","another name"):"that what we need"
-                     }
-        }
+            "info2": {
+                "still not name": "not name",
+                ("not name", "oleg", "another name"): "that what we need",
+            }
+        },
     ]
 }

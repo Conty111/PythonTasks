@@ -4,4 +4,4 @@ name: ***
 age: ***
 countries: ***
 """
-task = ["oleg",24,["Belarus","Russia"]]
+task = ["oleg", 24, ["Belarus", "Russia"]]

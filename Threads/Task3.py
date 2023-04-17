@@ -5,10 +5,11 @@
 import time
 from threading import Thread
 
+
 def faster():
     while True:
         time.sleep(3)
-        print('Быстрее!')
+        print("Быстрее!")
 
 
 if __name__ == "__main__":

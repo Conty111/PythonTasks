@@ -21,7 +21,7 @@ def sale(scores: int) -> int:
 
 
 if __name__ == "__main__":
-    score = int(input('Введите количество баллов: '))
+    score = int(input("Введите количество баллов: "))
     while score != "off":
-        print(f'Ваша скидка: {sale(score)}%')
-        score = int(input('Введите количество баллов: '))
+        print(f"Ваша скидка: {sale(score)}%")
+        score = int(input("Введите количество баллов: "))

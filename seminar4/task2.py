@@ -13,10 +13,11 @@ if start == "game":
                 break
             else:
                 print("Неа")
-        else: 
-            print('Попытки кончились.')
-        print('Если хотите начать новую игру - введите "game". Чтобы выйти - введите "off".')
+        else:
+            print("Попытки кончились.")
+        print(
+            'Если хотите начать новую игру - введите "game". Чтобы выйти - введите "off".'
+        )
         start = input()
         while start != "off" and start != "game":
             start = input()
-        

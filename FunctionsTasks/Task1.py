@@ -7,16 +7,18 @@
 «Готово! Заберите бейджики.»
 Функция должна принимать имя и группу ученика.
 """
+
+
 def create_badge(name: str, group: str) -> str:
     res = f'"Колледж Сириус"\n"Имя: {name}"\n"Группа: {group}"'
     return res
 
 
 def main():
-    count_students = int(input('Сколько учеников? '))
+    count_students = int(input("Сколько учеников? "))
     for _ in range(count_students):
-        name = input('Имя студента: ')
-        group = input('Группа: ')
+        name = input("Имя студента: ")
+        group = input("Группа: ")
         print(create_badge(name=name, group=group))
     print("Готово! Заберите бэйджики.")
 

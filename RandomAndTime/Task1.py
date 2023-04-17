@@ -19,8 +19,9 @@ def move_time():
         return "off"
     elif t2 - t1 <= 0:
         return "off"
-    ALL_TIME -= (t2 - t1)
+    ALL_TIME -= t2 - t1
     return ALL_TIME
+
 
 res = move_time()
 print(res)

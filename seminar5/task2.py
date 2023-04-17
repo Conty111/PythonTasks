@@ -1,4 +1,4 @@
-b = [3,4,5,3,4,5,4,2]
+b = [3, 4, 5, 3, 4, 5, 4, 2]
 c = []
 grade = 0
 print("Marks: ", end="")
@@ -12,5 +12,5 @@ for i in b:
     if i == 3 or i == 4 or i == 5:
         grade += 1
 
-print("\n"+"; ".join(c))
-print("Grade:", (grade/len(b))*100)
+print("\n" + "; ".join(c))
+print("Grade:", (grade / len(b)) * 100)

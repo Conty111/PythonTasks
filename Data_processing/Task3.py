@@ -2,6 +2,9 @@
 Напишите функцию которая будет принимать список чисел и выводить на экран надпись "сегодня x градусов" столько раз
 сколько значений в списке.
 """
-array = list(map(int, input().split()))
-for i in array:
-    print("Сегодня", i, "градусов.")
+# array = list(map(int, input().split()))
+
+
+def print_climate(array: list) -> None:
+    for i in array:
+        print("Сегодня", i, "градусов.")

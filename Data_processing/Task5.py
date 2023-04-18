@@ -7,3 +7,12 @@ PS отрывок текста - это вот этот текст что све
 PS2 для нахождения наиболее встречающегося символа можно использовать класс Counter из модуля collections
 и метод класса most_common().
 """
+from collections import Counter
+
+
+def top3(string: str) -> None:
+    for simvol in Counter(string).most_common(3):
+        print(f'Символ "{simvol[0]}" - кол-во: {simvol[1]}')
+
+
+top3("aaaaaaaaaaaaaaadw1ihdnpoqwccccccccccc")

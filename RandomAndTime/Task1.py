@@ -10,7 +10,7 @@ import time
 ALL_TIME = 15
 
 
-def move_time():
+def move_time() -> int:
     global ALL_TIME
     t1 = time.time()
     move = input()

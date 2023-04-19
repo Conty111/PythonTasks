@@ -6,3 +6,20 @@
 1) «Ваш номер: _».
 2) «Участников в первом забеге: _», «Участников во втором забеге: _».
 """
+from random import randint
+
+runners1 = 0
+runners2 = 0
+
+data = input('Введите ваше имя. Чтобы закончить введите "off": \n')
+
+while data != "off":
+    run_value = randint(1, 2)
+    if run_value == 1:
+        runners1 += 1
+    else:
+        runners2 += 1
+    print("Ваш номер:", run_value)
+    print(f"Участников в первом забеге: {runners1}")
+    print(f"Участников в втором забеге: {runners2}")
+    data = input("\nЧтобы завершить - off\n")

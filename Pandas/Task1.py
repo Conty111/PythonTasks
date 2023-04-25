@@ -16,16 +16,17 @@ import pandas as pd
 
 dataframe = pd.read_csv("Pandas/Titanic.csv")
 fare = dataframe["Fare"]
+sex = dataframe['Sex']
 
 print(f"Count of passengers: {dataframe['PassengerId'].count()}")
 print(f"Mean age of passengers: {dataframe['Age'].mean()}")
 print(f"Mean cost of tickets: {fare.mean()}")
 print(f"Most expensive ticket: {fare.max()}. Most cheap ticket: {fare.min()}")
 print(f"Passenger with the most expensive ticket: {dataframe[fare==fare.max()]['Name']}\n")
-print(f"Mean age of mens: {dataframe[dataframe['Sex']=='male']['Age'].mean()}")
-print(f"Mean age of womans: {dataframe[dataframe['Sex']=='female']['Age'].mean()}")
-print(f"Mean value of survived mans: {dataframe[dataframe['Sex']=='male']['Survived'].mean()}")
-print(f"Mean value of survived womans: {dataframe[dataframe['Sex']=='female']['Survived'].mean()}")
+print(f"Mean age of mens: {dataframe[sex=='male']['Age'].mean()}")
+print(f"Mean age of womans: {dataframe[sex=='female']['Age'].mean()}")
+print(f"Mean value of survived mans: {dataframe[sex=='male']['Survived'].mean()}")
+print(f"Mean value of survived womans: {dataframe[sex=='female']['Survived'].mean()}")
 
 for plane_class in set(dataframe["Pclass"].values):
     classes_now = dataframe["Pclass"] == plane_class

@@ -16,7 +16,7 @@ import pandas as pd
 
 dataframe = pd.read_csv("Pandas/Titanic.csv")
 fare = dataframe["Fare"]
-sex = dataframe['Sex']
+sex = dataframe["Sex"]
 
 print(f"Count of passengers: {dataframe['PassengerId'].count()}")
 print(f"Mean age of passengers: {dataframe['Age'].mean()}")

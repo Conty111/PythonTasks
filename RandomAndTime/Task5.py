@@ -2,16 +2,14 @@
 Напишите программу-имитатор подбрасывания 2 кубиков.
 Программа выводит на экран "подбрасываю кубики" и спустя 2 секунды выводит значения на кубиках в одну строку.
 """
-import random
-import time
+from random import randint
+from time import sleep
 
 letsgo = input("Для продолжения введите что-либо...\n")
 
 while letsgo:
     print("Подбрасываю кубики...")
-    time.sleep(2)
-    print(
-        f"Первый кубик: {random.randint(1, 6)}, второй кубик - {random.randint(1, 6)}"
-    )
+    sleep(2)
+    print(f"Первый кубик: {randint(1, 6)}, второй кубик - {randint(1, 6)}")
 
     letsgo = input("\nДля продолжения введите что-либо...\n")

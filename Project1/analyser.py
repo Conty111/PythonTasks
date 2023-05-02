@@ -12,6 +12,9 @@ def make_answer(response) -> list:
             if DATA_OUTPUT[value] == "game":
                 russian_game()
                 output.append("Хорошая игра)))")
+            elif DATA_OUTPUT[value] == "ricroll":
+                ricroll()
+                output.append("Вас зарикроллили\n")
             elif DATA_OUTPUT[value] not in output:
                 output.append(DATA_OUTPUT[value])
     if not output:
@@ -64,3 +67,7 @@ def russian_game():
         else:
             print("Вы ввели что-то не то... Попробуйте ещё раз\n")
             value = input()
+
+
+def ricroll():
+    os.system('curl ascii.live/can-you-hear-me')

@@ -7,10 +7,13 @@
 login = input()
 
 try:
-    assert login == login.lower()
-except BaseException:
-    raise "Неверный логин"
+    if login == login.lower():
+       pass
+    else:
+        raise
+except BaseException as err:
+    print(err)
 else:
-    print('Логин добавлен в базу')
+     print('Логин добавлен в базу')
 finally:
     print('Я выучил исключения')

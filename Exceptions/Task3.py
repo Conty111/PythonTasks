@@ -3,3 +3,17 @@
 Если ошибки не произошло писать фразу "Логин добавлен в базу". В не зависимости от того была ли ошибка должно печататься
 "Я выучил исключения"
 """
+
+login = input()
+
+try:
+    if login == login.lower():
+       pass
+    else:
+        raise
+except BaseException as err:
+    print(err)
+else:
+     print('Логин добавлен в базу')
+finally:
+    print('Я выучил исключения')

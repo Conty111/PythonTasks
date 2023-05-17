@@ -4,3 +4,12 @@
 файле должна начинаться с ее номера, двоеточия и пробела, после чего
 должен идти текст строки из исходного файла.
 """
+file_name = input()
+new_file_name = input()
+
+with open(file_name, "r+") as read_text:
+    sentences = read_text.readlines()
+
+with open(new_file_name, "w+") as new_text:
+    for idx in range(len(sentences)):
+        new_text.write(f"{idx + 1}: {sentences[idx]}")

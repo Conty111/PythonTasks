@@ -5,3 +5,9 @@
 
 
 lst = ["Максим", 12, 14, "Олег", "100"]
+
+for i in lst:
+    try:
+        print(i / 3)
+    except BaseException:
+        raise "Невозможно разделить"

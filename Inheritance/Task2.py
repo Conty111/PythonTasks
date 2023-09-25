@@ -4,3 +4,19 @@
 Во втором классе вызовите метод класса родителя и добавьте к выводу надпись "но его отчислят если он не будет учить ООП".
 Создайте экземпляр второго класса с вашим именем и вызовите метод печатающий всю надпись.
 """
+
+class Papa():
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+    def add_genius(self) -> None:
+        self.name += ' гений'
+
+class Synok(Papa):
+    def add_genius(self) -> None:
+        super().add_genius()
+        self.name += ", но его отчислят, если он не будет ходить на физру"
+
+grisha = Synok("Grigoriy")
+grisha.add_genius()
+print(grisha.name)

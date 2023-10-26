@@ -62,6 +62,12 @@ def main():
             soldiers = length
     
     teams[win_team][0].level_up()
+    teams[win_team][0].set_win_rank()
+
+    for idx in range(len(teams)):
+        if idx != win_team:
+            teams[idx][0].del_rank()
+
     for s in teams[win_team][1:]:
         s.follow_hero(teams[win_team][0])
 

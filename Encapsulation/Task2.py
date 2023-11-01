@@ -44,7 +44,7 @@ def main():
     teams = {"red": [], "blue": []}
     idx = 1
     for key, val in teams.items():
-        hero = Hero(team=key, id_obj=idx)
+        hero = Hero(team=key, id_obj=idx, rank="Some rank")
         val.append(hero)
         idx += 1
     
@@ -64,11 +64,12 @@ def main():
     teams[win_team][0].level_up()
     teams[win_team][0].set_win_rank()
 
-    for idx in range(len(teams)):
-        if idx != win_team:
-            teams[idx][0].del_rank()
+    for key in teams.keys():
+        if key != win_team:
+            teams[key][0].del_rank()
 
     for s in teams[win_team][1:]:
         s.follow_hero(teams[win_team][0])
+
 
 main()

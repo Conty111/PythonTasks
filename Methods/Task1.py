@@ -9,7 +9,7 @@
 from datetime import date
 
 
-class Person:
+class Person():
     name: str
     age: int
 

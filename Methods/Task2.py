@@ -9,7 +9,7 @@
 """
 
 
-class Vector3D:
+class Vector3D():
     def __init__(self, x: int, y: int, z: int) -> None:
         self.x = x
         self.y = y
